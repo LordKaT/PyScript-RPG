@@ -17,4 +17,4 @@ async def run():
     assert entity.set_stat("intelligence", 2) == 2
     assert entity.get_stat("intelligence") == 2
     
-    # document.getElementById("output").innerHTML += f"<p>[PASS] {entity.name} loaded and tested: {entity}"
+    document.getElementById("output").innerHTML += f"<p>[PASS] {entity.name} loaded and tested: {entity}"
