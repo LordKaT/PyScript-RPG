@@ -1,5 +1,6 @@
 class Entity:
-    def __init__(self, id: str = None, name: str = None, tags: list = [], attributes: dict = None, stats: dict = None) -> None:
+    def __init__(self, id: str = None, name: str = None, tags: list = [],
+                 attributes: dict = None, stats: dict = None) -> None:
 
         default_stats = {
             "hp": 10,

@@ -1,0 +1,17 @@
+id: goblin_test
+name: Test Goblin
+tags:
+  - npc
+  - goblin
+stats:
+  hp: 40
+  max_hp: 40
+  tp: 100
+  max_tp: 100
+  strength: 2
+  agility: 5
+attributes:
+  size: small
+  color: green
+state:
+  alive: true
