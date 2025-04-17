@@ -14,5 +14,10 @@ async def run():
     assert entity.stats.modify("agility", 10) == 15
     assert entity.stats.set("intelligence", 2) == 2
     assert entity.stats.get("intelligence") == 2
+    assert entity.stats.get("level") == 1
+    assert entity.stats.set("level", 2) == 2
+    assert entity.stats.derived()["tnl"] == 3000
+    assert entity.stats.set("xp", 100) == 100
+    assert entity.stats.derived()["tnl"] == 2900
 
     document.getElementById("output").innerHTML += f"<p>[PASS] {entity.name} loaded and tested"

@@ -11,7 +11,9 @@ class Stats:
             "intelligence": 0,
             "wisdom": 0,
             "charisma": 0,
-            "luck": 0
+            "luck": 0,
+            "level": 1,
+            "xp": 0
         }
         self.stats = default_stats if base_stats is None else {**default_stats, **base_stats}
 
@@ -31,7 +33,8 @@ class Stats:
         return {
             "attack": s["strength"] * 2,
             "evasion": s["agility"] * 1.5,
-            "crit_chance": s["dexterity"] + (s["luck"] * 0.5)
+            "crit_chance": s["dexterity"] + (s["luck"] * 0.5),
+            "tnl": ((s["level"] + 1) * 1500) - s["xp"]
         }
 
     def as_dict(self):
