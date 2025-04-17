@@ -27,7 +27,7 @@ assert entity.get_stat("tp") == 100
 assert entity.get_stat("max_tp") == 100
 assert entity.get_stat("strength") == 2
 assert entity.get_stat("agility") == 5
-assert entity.modify_stat("agility", 10) == 12
+assert entity.modify_stat("agility", 10) == 15
 assert entity.set_stat("intelligence", 2) == 2
 assert entity.get_stat("intelligence") == 2
 
