@@ -6,6 +6,8 @@ async def load_entity_from_yaml(path):
     text = await res.text()
     data = yaml.safe_load(text)
 
+    console.log(data)
+
     return Entity(
         id=data["id"],
         name=data["name"],
