@@ -3,6 +3,7 @@ from js import console, document
 import asyncio
 
 async def run():
+    console.log("Loading")
     entity = await load_entity_from_yaml("data/entities/test/test_goblin.yaml")
 
     console.log("Loaded: ", entity)
