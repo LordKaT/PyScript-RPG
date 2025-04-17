@@ -1,5 +1,5 @@
 from utils.yaml_loader import load_entity_from_yaml
-from js import console, document
+from js import document
 import asyncio
 
 async def run():
