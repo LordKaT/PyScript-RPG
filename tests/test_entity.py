@@ -1,5 +1,5 @@
 from utils.yaml_loader import load_entity_from_yaml
-from js import document
+from js import document, console
 import asyncio
 
 async def run():
@@ -16,6 +16,7 @@ async def run():
     assert entity.stats.get("intelligence") == 2
     assert entity.stats.get("level") == 1
     assert entity.stats.set("level", 2) == 2
+    console.log(entity.stats.derived()["tnl"])
     assert entity.stats.derived()["tnl"] == 3000
     assert entity.stats.set("xp", 100) == 100
     assert entity.stats.derived()["tnl"] == 2900
