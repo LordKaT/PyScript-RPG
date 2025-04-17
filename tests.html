@@ -7,7 +7,7 @@
     <script type="module" defer src="pyscript/core.js"></script>
 </head>
 <body>
-    <h1>🧪 RPG Entity Test Runner</h1>
+    <h1>🧪 RPG Unit Tests</h1>
     <div id="output"></div>
 
     <py-config>
@@ -23,6 +23,8 @@
 
     <py-script>
         from tests import test_entity
+        from js import document
+        document.getElementById("output").innerHTML += "<p><h2>Entity Test</h2></p>"
         test_entity.run()
     </py-script>
 </body>
