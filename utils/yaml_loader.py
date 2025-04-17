@@ -11,7 +11,7 @@ async def load_entity_from_yaml(path):
     return Entity(
         id=data["id"],
         name=data["name"],
-        tags=data.get(["tags"], []),
+        tags=data.get("tags", []),
         stats=data.get("stats", {}),
         attributes=data.get("attributes", {})
     )
