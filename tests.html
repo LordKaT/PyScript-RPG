@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RPG Test Runner</title>
+    <link rel="stylesheet" href="pyscript/core.css">
+    <script defer src="pyscript/core.js"></script>
+</head>
+<body>
+    <h1>🧪 RPG Entity Test Runner</h1>
+    <div id="output"></div>
+
+    <py-config>
+        packages = []
+        [[fetch]]
+        files = [
+            "logic/entity.py",
+            "tests/test_entity.py"
+        ]
+    </py-config>
+
+    <py-script>
+        from tests import test_entity
+    </py-script>
+</body>
+</html>
