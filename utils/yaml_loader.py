@@ -1,9 +1,7 @@
-import js, micropip
+import js, yaml
 from logic.entity import Entity
 
 async def load_entity_from_yaml(path):
-    await micropip.install("pyyaml")
-    import yaml
     res = await js.fetch(path)
     text = await res.text()
     data = yaml.safe_load(text)
