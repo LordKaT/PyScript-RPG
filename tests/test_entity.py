@@ -4,6 +4,7 @@ import asyncio
 
 async def run():
     entity = await load_entity_from_yaml("data/entities/test/test_goblin.yaml")
+    document.getElementById("output").innerHTML += "<p>Test start</p>"
     
     assert entity.stats.get("hp") == 40
     assert entity.stats.get("max_hp") == 40
