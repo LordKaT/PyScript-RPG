@@ -1,5 +1,3 @@
-# logic/stats.py
-
 class Stats:
     def __init__(self, base_stats: dict = None) -> None:
         default_stats = {

@@ -3,8 +3,11 @@ from js import document, console
 import asyncio, sys, traceback
 
 async def run():
+    document.getElementById("output").innerHTML += "<p><h3>Entity Test</h3></p>"
+    document.getElementById("output").innerHTML += "<p>[START] Loading Entity...</p>"
     entity = await load_entity_from_yaml("data/entities/test/test_goblin.yaml")
-    document.getElementById("output").innerHTML += "<p>[START] Begin...</p>"
+
+    document.getElementById("output").innerHTML += "<p>[START] Loaded, running tests...</p>"
     try:
         assert entity.stats.get("hp") == 40
         assert entity.stats.get("max_hp") == 40
@@ -26,4 +29,4 @@ async def run():
         traceback.print_tb(tb) # Fixed format
         tb_info = traceback.extract_tb(tb)
         filename, line, func, text = tb_info[-1]
-        document.getElementById("output").nnerHTML += f"<p>[FAIL] {entity.name} line {line}, {text}</p>"
+        document.getElementById("output").innerHTML += f"<p>[FAIL] {entity.name} line {line}, {text}</p>"

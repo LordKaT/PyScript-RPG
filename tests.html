@@ -16,17 +16,19 @@
         files = [
             "logic/stats.py",
             "logic/entity.py",
+            "logic/battle.py",
             "utils/yaml_loader.py",
             "tests/test_entity.py",
+            "tests/test_battle.py",
             "data/entities/test/test_goblin.yaml"
         ]
     </py-config>
 
     <script type="py">
-        from tests import test_entity
+        from tests import test_entity, test_battle
         from js import document
-        document.getElementById("output").innerHTML += "<p><h2>Entity Test</h2></p>"
-        test_entity.run()
+        await test_entity.run()
+        await test_battle.run()
     </script>
 </body>
 </html>
