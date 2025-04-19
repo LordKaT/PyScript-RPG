@@ -42,7 +42,7 @@ class Battle:
         
         damage_type = "normal"
         damage_mod = random.uniform(0, a_d["damage_modifier"])        
-        damage = (a_d["attack"] + damage_mod) - d_d["defense"]
+        damage = (attack + damage_mod) - defense
         if (100.0 - a_d["crit_chance"]) < random.uniform(0, 100):
             damage *= a_d["crit_damage"]
             damage_type = "crit"
